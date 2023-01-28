@@ -1,10 +1,10 @@
-import { CategoriesPreview } from './CategoriesPreview'
+import { CategoriePreview } from './CategoriePreview'
 
 export const CategoriesList = ({ categories }) => {
   return (
     <section className='categories-list'>
       {categories.map((c) => (
-        <CategoriesPreview categorie={c} key={c.name} />
+        <CategoriePreview categorie={c} key={c.name} />
       ))}
     </section>
   )

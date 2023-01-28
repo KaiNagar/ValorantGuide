@@ -1,0 +1,24 @@
+.categorie-preview {
+  border: 1px solid black;
+  padding: 6rem 1rem;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: $clr-white;
+  transition: 0.3s all;
+  .categorie-name {
+    background-color: $clr-LgreyLow;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    
+}
+&:hover {
+    opacity: 0.7;
+    transform: scale(1.02);
+    text-decoration: none;
+  }
+}
