@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { AgentsList } from '../../cmps/agents/AgentsList'
-import { agentService } from '../../services/game-services/agent.service'
+import { AgentsList } from '../../../cmps/agents/AgentsList'
+import { agentService } from '../../../services/game-services/agent.service'
 
 export const Agents = () => {
   const [agents, setAgents] = useState([])

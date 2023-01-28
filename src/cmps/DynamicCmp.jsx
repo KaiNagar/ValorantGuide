@@ -1,4 +1,4 @@
-import { Agents } from "../pages/categories/Agents"
+import { Agents } from "../pages/categories/agents/Agents"
 
 export const DynamicCmp = ({ type }) => {
   switch (type) {

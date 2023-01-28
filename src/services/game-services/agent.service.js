@@ -7,6 +7,7 @@ const AGENTS_API = 'https://valorant-api.com/v1/agents'
 
 export const agentService = {
     getAgents,
+    getAgentById
 }
 
 
@@ -22,11 +23,17 @@ async function getAgents() {
 }
 
 function prepearData(data) {
-    return data.map(agent => {
+    const filteredData = data.filter(agent => agent.isPlayableCharacter)
+    return filteredData.map(agent => {
         return {
             id: agent.uuid,
             name: agent.displayName,
             imgUrl: agent.displayIcon
         }
     })
+}
+
+function getAgentById(agentId) {
+    const agents = utilService.loadFromStorage(CACHE_NAME)
+    return agents.find(agent => agent.id === agentId)
 }
