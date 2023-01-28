@@ -15,8 +15,18 @@ async function getAgents() {
     if (!agents || !agents.length) {
         console.log('From API');
         const res = await axios.get(AGENTS_API)
-        agents = res.data.data
+        agents = prepearData(res.data.data)
         utilService.saveToStorage(CACHE_NAME, agents)
     }
     return agents
+}
+
+function prepearData(data) {
+    return data.map(agent => {
+        return {
+            id: agent.uuid,
+            name: agent.displayName,
+            imgUrl: agent.displayIcon
+        }
+    })
 }
