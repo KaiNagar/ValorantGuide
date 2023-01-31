@@ -12,7 +12,6 @@ export const AgentDetails = () => {
 
   const loadAgent = async () => {
     const currentAgent = await agentService.getAgentById(agentId)
-    console.log(currentAgent)
     setAgent(currentAgent)
   }
 
